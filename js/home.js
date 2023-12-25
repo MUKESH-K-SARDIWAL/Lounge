@@ -41,15 +41,15 @@ $('#owl-carousel2').owlCarousel({
             nav: false,
 
         },
-        400:{
-            item:3
+        400: {
+            item: 3
         },
         556: {
             items: 4,
             nav: false
         },
-        776:{
-            item:5
+        776: {
+            item: 5
         },
         992: {
             items: 7,
@@ -64,7 +64,7 @@ $('#owl-carousel3').owlCarousel({
     margin: 30,
     responsiveClass: true,
     nav: false,
-    
+
     autoplay: true,
     autoplayTimeout: 1000,
     autoplayHoverPause: true,
@@ -91,7 +91,7 @@ $('#BANNER1').owlCarousel({
     margin: 0,
     responsiveClass: true,
     nav: false,
-    
+
     autoplay: true,
     autoplayTimeout: 3000,
     autoplayHoverPause: true,
@@ -102,6 +102,3 @@ $('#BANNER1').owlCarousel({
         }
     }
 })
-
-
-

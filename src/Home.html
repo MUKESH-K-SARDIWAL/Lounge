@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="../css/resp.css">
     <link rel="stylesheet" href="../css/owl.carousel.min.css">
     <link rel="stylesheet" href="../css/owl.theme.default.min.css">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
@@ -21,7 +22,7 @@
                 <div class="d-flex justify-content-between justify-content-lg-center align-items-center w-100 py-2">
                     <div class="w-25">
                         <div class="Arin_logo">
-                            <a href="Home.html">
+                            <a href="Home.html" class="animate_logo">
                                 <img src="../assets/logo.jpeg" alt="Arin_logo" width="" height=""
                                     class="d-lg-block d-none" id="logoArin">
                                 <img src="../assets/sm-logo.jpeg" class="d-lg-none d-black" alt="" width="60"
@@ -67,9 +68,12 @@
                                 </span>
                             </div>
                         </div>
-                        <button class="buyItNow d-lg-flex d-none">
-                            <span>Buy Now</span>
-                        </button>
+                        <div class="btnanimated">
+                            <button class="buyItNow d-lg-flex d-none">
+                                <span>Buy Now</span>
+                            </button>
+                        </div>
+
                         <div class="d-lg-none d-block" class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                             data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
                             aria-label="Toggle navigation">
@@ -132,8 +136,8 @@
             <div class="container">
                 <div
                     class="d-flex flex-lg-row flex-column align-items-center justify-content-between gap-sm-5 gap-3 col-12">
-                    <div
-                        class="d-flex flex-column justify-content-center align-items-center align-items-lg-start start col-lg-8 col-12 mt-md-5 mt-1">
+                    <div class="d-flex flex-column justify-content-center align-items-center align-items-lg-start start col-lg-8 col-12 mt-md-5 mt-1 "
+                        id="banner_animated">
 
                         <h3>Welcome</h3>
                         <p class="banner_text mb-2">WE ARE IPTV SERVICE <br class="d-lg-block d-none"> PROVIDER COMPANY
@@ -143,7 +147,7 @@
                             watch your
                             favorite sport event in best possible
                             picture quality. Buy IPTV Service includes VIP Sport channels all arround the world.</p>
-                        <div class="d-flex justify-content-start align-items-center gap-4">
+                        <div class="d-flex justify-content-start align-items-center gap-4 banner_btn_animate">
                             <button class="buyItNow">
                                 <span>Show Plan</span>
                             </button>
@@ -153,7 +157,7 @@
                         </div>
                     </div>
                     <div
-                        class="flex-column justify-content-center align-items-center d-flex col-lg-4 col-12 cursor-pointer">
+                        class="flex-column justify-content-center align-items-center d-flex col-lg-4 col-12 cursor-pointer video_btn_animated">
                         <p>
                             <span class="play_btn text-center">
                                 <i class="fa-regular fa-circle-play"></i>
@@ -225,7 +229,7 @@
     <div class="loung_intro">
         <div class="intro-padding container col-12">
             <div class="d-flex flex-row align-items-start justify-content-between flex-lg-nowrap flex-wrap">
-                <div class="col-12 col-lg-5 d-flex flex-column position-relative">
+                <div class="col-12 col-lg-5 d-flex flex-column position-relative into_left_animated">
                     <div class="col-12 rounded-3">
                         <img src="../assets/movie1.webp" class="rounded-4" alt="">
                     </div>
@@ -247,9 +251,12 @@
                             advantages while enjoying our
                             service.
                         </p>
-                        <button class="Purchase_btn mt-5 mx-auto mx-lg-0">
-                            <span>Call Us Now For Purchase IPTV</span>
-                        </button>
+                        <div>
+                            <button class="Purchase_btn mt-5 mx-auto mx-lg-0">
+                                <span>Call Us Now For Purchase IPTV</span>
+                            </button>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -497,13 +504,14 @@
     <div class="type_file w-100">
         <div class="container">
             <div class="d-flex flex-row align-items-center justify-content-between gap-4 my-5 flex-wrap flex-xl-nowrap">
-                <div class="col-lg-5 col-12 d-flex flex-column align-items-lg-start align-items-center">
+                <div
+                    class="col-lg-5 col-12 d-flex flex-column align-items-lg-start align-items-center file_type_animate">
                     <h3 class="file_type_head">TYPE OF FILMS
                     </h3>
                     <p class="file_type_text">Choose The Type Of Film You Liked
                     </p>
                 </div>
-                <div class="col-lg-6 col-12">
+                <div class="col-lg-6 col-12 file_type_animate2">
                     <span class="file_type_right_text">Enjoy more than 160000 TV Channels, Movies, and TV shows! with
                         Features of Catch Up & EPG
                         (Electronic Program Guide) for
@@ -511,7 +519,7 @@
                     </span>
                 </div>
             </div>
-            <div class="d-flex flex-row align-items-start justify-content-start flex-wrap col-12 gap-4 ">
+            <div class="d-flex flex-row align-items-start justify-content-start flex-wrap col-12 gap-4 box_animated3">
                 <div
                     class="d-flex flex-row align-items-center justify-content-start rounded-3 p-3 border-box gap-4 coad_file_sty ">
                     <div class="rounded-2 overflow-hidden bg-font">
@@ -758,6 +766,59 @@
     <script src="../js/owl.carousel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/home.js"></script>
+
+    <script>
+
+        var time = gsap.timeline()
+
+
+        time.from('.animate_logo img,.header_list li,.hovereff,.btnanimated', {
+            y: -200,
+            duration: 1,
+            stagger: 0.1
+        });
+
+        time.from('#banner_animated h3,#banner_animated p,.banner_btn_animate,.video_btn_animated', {
+            y: 100,
+            duration: 1,
+            stagger: 0.3,
+            opacity: 0
+        });
+
+        gsap.from('.into_left_animated,.intro_right h3,.intro_right p,.intro_right div', {
+            y: 200,
+            duration: 1,
+            stagger: 0.5,
+            opacity: 0,
+            scrollTrigger: { trigger: '.into_left_animated', scroller: 'body' }
+        });
+
+        gsap.from('.price_plan .price_plan_head,.price_plan p,.price_plan div .price_card_style', {
+            y: 200,
+            duration: 0.5,
+            stagger: 0.3,
+            opacity: 0,
+            scrollTrigger: { trigger: '.price_plan', scroller: 'body' }
+        });
+
+        gsap.from('.file_type_animate h3,.file_type_animate p,.file_type_animate2 span', {
+            y: 100,
+            duration: 1,
+            stagger: 0.5,
+            opacity: 0,
+            scrollTrigger: { trigger: '.file_type_animate', scroller: 'body' }
+        })
+
+        gsap.from('.box_animated3 .coad_file_sty', {
+            y: 200,
+            duration: 1,
+            stagger: 0.5,
+            opacity: 0,
+            scrollTrigger: { trigger: '.file_type_animate', scroller: 'body' }
+        })
+
+
+    </script>
 </body>
 
 </html>
